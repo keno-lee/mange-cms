@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <!-- 头部 -->
-    <mt-header fixed title="CMS-管理系统"></mt-header>
+    <mt-header fixed title="CMS-管理系统">
+    			<mt-button icon="back" slot="left" v-if="$route.path != '/home'" @click="$router.go(-1)">back</mt-button>
+		</mt-header>
+		
     <router-view/>
 
     <nav class="mui-bar mui-bar-tab">
