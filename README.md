@@ -1,4 +1,4 @@
-# heima-manage-cms
+# manage-cms
 
 > A Vue.js project
 

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- 头部 -->
-    <mt-header fixed title="黑马前端19期"></mt-header>
+    <mt-header fixed title="CMS-管理系统"></mt-header>
     <router-view/>
 
     <nav class="mui-bar mui-bar-tab">
