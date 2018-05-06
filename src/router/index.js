@@ -48,7 +48,7 @@ export default new Router({
       component: Goods
     },
     {
-      path: '/goods/detail',
+      path: '/goods/detail/:id',
       component: GoodsDetail
     },
     // 新闻路由
@@ -62,11 +62,11 @@ export default new Router({
     },
     // 图片路由
     {
-      path: '/pics',
+      path: '/pics/:id',
       component: Pics
     },
     {
-      path: '/pics/detail',
+      path: '/pics/detail/:id',
       component: PicsDetail
     }
   ],

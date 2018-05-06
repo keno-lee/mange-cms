@@ -85,6 +85,8 @@ export default {
               user_name: "匿名用户"
             });
           }
+          // 清空文本框
+          this.content = "";
         });
       }
     }

@@ -9,19 +9,19 @@
 
     <nav class="mui-bar mui-bar-tab">
       <!-- 尾部tabbar -->
-			<router-link class="mui-tab-item" to="/home">
+			<router-link class="mui-tab-item-cms" to="/home">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>
 			</router-link>
-			<router-link class="mui-tab-item" to="/member">
+			<router-link class="mui-tab-item-cms" to="/member">
 				<span class="mui-icon mui-icon-contact"></span>
 				<span class="mui-tab-label">会员</span>
 			</router-link>
-			<router-link class="mui-tab-item" to="/cart">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">9</span></span>
+			<router-link class="mui-tab-item-cms" to="/cart">
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">{{this.$store.getters.totalCount}}</span></span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
-			<router-link class="mui-tab-item" to="/search">
+			<router-link class="mui-tab-item-cms" to="/search">
 				<span class="mui-icon mui-icon-search"></span>
 				<span class="mui-tab-label">搜索</span>
 			</router-link>
@@ -31,9 +31,7 @@
 </template>
 
 <script>
-// import { Header } from 'mint-ui';
 
-// Vue.component(Header.name, Header);
 export default {
   name: "App"
 };
@@ -42,5 +40,39 @@ export default {
 <style scoped>
 #app {
   padding: 40px 5px 50px 5px;
+}
+.mint-header,.mui-bar.mui-bar-tab {
+	z-index:999;
+}
+
+.mui-bar-tab .mui-tab-item-cms.mui-active {
+    color: #007aff;
+}
+
+.mui-bar-tab .mui-tab-item-cms {
+    display: table-cell;
+    overflow: hidden;
+    width: 1%;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #929292;
+}
+
+.mui-bar-tab .mui-tab-item-cms .mui-icon {
+    top: 3px;
+    width: 24px;
+    height: 24px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.mui-bar-tab .mui-tab-item-cms .mui-icon ~ .mui-tab-label {
+    font-size: 11px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 </style>
